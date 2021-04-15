@@ -35,6 +35,8 @@ public class Connection extends AsyncTask <String,Void,String>
     protected String doInBackground(String... strings) {
         DataOutputStream dataOutputStream=null;
         DataInputStream dataInputStream=null;
+        //-> to send configuartion of router use 192.168.4.1
+        //-> if esp is connected to the home router you can use 192.168.1.117 as ip for connecting 
         try {
             socket = new Socket("192.168.1.117", 8089);
             // check the state of the connection if it is okay then send data
